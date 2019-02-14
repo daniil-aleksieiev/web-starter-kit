@@ -4,10 +4,13 @@
 // Feel free with using ES6 here.
 
 // import {NAME} from './modules/...';
+import stickyHeader from './modules/stickyHeader';
+import pageScroll from './modules/pageScroll';
 
 (($) => {
   // When DOM is ready
   $(() => {
-    // ...
+    stickyHeader.goSticky();
+    pageScroll.animateScroll();
   });
 })(jQuery);
