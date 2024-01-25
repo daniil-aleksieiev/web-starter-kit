@@ -3,11 +3,12 @@
 // Note: If you use a framework that includes base styling then you need to remove this file.
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
 }
 
 *, *:before, *:after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 *::selection {
@@ -21,13 +22,29 @@ body {
   color: map-deep-get($colors, 'base', 'lighten-black');
   font: #{map-get($font-size, 'base')}/#{map-get($line-height, 'base')} #{map-get($fonts, 'base-sans-serif')};
   min-width: map-get($breakpoints, 'phone-sm');
+  height: inherit;
   @include media('<phone-sm') {
     opacity: 0;
   }
 }
 
 #wrapper {
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
+  height: inherit;
+}
+
+#page {
+  &-header {
+    // ...
+  }
+  &-main {
+    flex-grow: 1;
+  }
+  &-footer {
+    // ...
+  }
 }
 
 // adaptive images
@@ -39,7 +56,7 @@ img {
 
 // hide tel links on desktop
 @media only screen and (min-width: 1025px) {
-    a[href^="tel"], a[href^="skype"], a[href^="sms"] {
+  a[href^="tel"], a[href^="skype"], a[href^="sms"] {
     cursor: default;
     pointer-events: none;
   }

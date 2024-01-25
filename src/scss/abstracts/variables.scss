@@ -65,15 +65,16 @@ $forms: (
 
 // Base media breakpoints
 $breakpoints: (
-  'desktop-lg': 2560px,
+  'desktop-xl': 2560px,
+  'desktop-lg': 1980px,
   'desktop-md': 1440px,
   'desktop-sm': 1200px,
   'tablet-lg' : 1024px,
   'tablet-md' : 980px,
   'tablet-sm' : 768px,
-  'phone'     : 767px,
-  'phone-md'  : 375px,
-  'phone-sm'  : 320px
+  'phone'     : 480px,
+  'phone-md'  : 414px,
+  'phone-sm'  : 375px
 );
 
 // Keywords for include media mixin
